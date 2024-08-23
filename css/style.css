@@ -32,6 +32,19 @@ a {
     text-decoration: none;
 }
 
+.logo-btn-filter {
+    margin-right: 20px;
+}
+
+.text-activity-card {
+font-family: 'Raleway';
+font-size: 16px;
+font-weight: 700;
+line-height: 18.78px;
+text-align: left;
+
+}
+
 .section-title {
     margin: 0;
     font-size: 22px;
@@ -62,6 +75,17 @@ a {
 
 .filter-text {
     margin-bottom: 10px;
+}
+
+.hide-text {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+
 }
 
 /****** Hebergements And Populaires ***********/
@@ -202,16 +226,25 @@ a {
     display: flex;
     align-items: flex-end;
     height: 34px;
+    color: #000; /* Couleur par défaut */
+    border: none; /* Supprime la bordure par défaut */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Transition pour un effet fluide */
 }
 
-.header-switch-hebergment {
-    border-width: 3px 0px 0px 0px;
-    border-color: blue;
-    color: #0065FC;
+.header-switch-hebergment:hover {
+    border-width: 0px 0px 3px 0px;
+    border-color: var(--main-color);
     border-style: solid;
-    display: flex;
-    align-items: flex-end;
+    color: var(--main-color); /* Couleur du texte lors du hover */
 }
+
+.header-switch-activity:hover {
+    border-width: 0px 0px 3px 0px;
+    border-color: var(--main-color);
+    border-style: solid;
+    color: var(--main-color); /* Couleur du texte lors du hover */
+}
+
 
 .logo {
     height: 19px;
@@ -240,7 +273,17 @@ a {
 #search {
     height: 45px;
     border: 1px solid #F2F2F2;
+    font-family: 'Raleway';
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    padding-left: 20px;
 }
+
+#search::placeholder {
+    color: black;
+  }
 
 #search-btn {
     display: flex;
@@ -251,6 +294,13 @@ a {
     border: none;
     border-radius: 0px 15px 15px 0px;
     background-color: #0065FC;
+    color: white;
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    text-align: center;
+
 }
 
 /****** filter ***********/
@@ -274,12 +324,16 @@ a {
 .logo-btn {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 157px;
     height: 50px;
-    border: 1px solid #F2F2F2;
+    border: 2px solid #F2F2F2;
     border-radius: 25px;
     margin: 0 10px 10px 10px;
+}
+
+.logo-btn:hover {
+    background: #DEEBFF;
 }
 
 .info-about-places {
@@ -374,6 +428,7 @@ a {
     }
 
     .populaires-cards {
+        display: flex;
         justify-content: space-between;
     }
 
@@ -405,6 +460,37 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .hide-text {
+        display: none;
+    }
+    #search-btn {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60px; /* Taille ajustée */
+        border: none;
+        right: 10px;
+        border-radius: 15px 15px 15px 15px;
+        background-color: #0065FC;
+        position: relative;
+        overflow: hidden;
+        text-indent: 0; /* Remet le texte dans sa position initiale */
+        color: white; /* Le texte alt sera blanc */
+        font-size: 0; /* Cache le texte normalement visible */
+    }
+
+    #search-btn::after {
+        content: '';
+        background-image: url('../images/loupe.png'); /* Chemin vers l'image */
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 20px; /* Ajuster la taille de l'image */
+        height: 20px; /* Ajuster la taille de l'image */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
     .main-container {
         padding: 0;
         box-sizing: content-box;
@@ -441,13 +527,15 @@ a {
     }
 
     .populaires-cards {
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .populaires-cards .card {
         width: 335px;
-        height: 146px;
+        height: 136px;
     }
 
     .activity-wrapper {
@@ -524,5 +612,22 @@ a {
 
     .research-wrap {
         justify-content: center;
+    }
+    .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .text-in-center {
+        margin-left: 5px;
+        padding-top: 15px;
+    }
+    .text-sizing {
+        margin-left: 5px;
+    }
+    .header-wrap {
+        margin-bottom: 20px;
+    }
+    .marseille-h2 {
+        margin-left: 10px;
     }
 }
