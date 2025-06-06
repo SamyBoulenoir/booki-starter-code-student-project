@@ -227,27 +227,34 @@ text-align: left;
     margin-top: 3px;
 }
 
-.header-switch div {
+/* Cache les inputs radio */
+.header-switch input[type="radio"] {
+    display: none;
+}
+
+/* Style général des labels (comme tes .divs) */
+.header-switch label {
     display: flex;
     align-items: flex-end;
     height: 34px;
     color: #000;
     border: none;
     transition: color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
 }
 
-.header-switch-hebergment:hover {
-    border-width: 0px 0px 3px 0px;
-    border-color: var(--main-color);
-    border-style: solid;
+/* Style au hover (optionnel) */
+.header-switch label:hover {
     color: var(--main-color);
 }
 
-.header-switch-activity:hover {
-    border-width: 0px 0px 3px 0px;
-    border-color: var(--main-color);
-    border-style: solid;
+/* Style actif (équivalent de :hover mais persistant) */
+#hebergment:checked + .header-switch-hebergment,
+#activity:checked + .header-switch-activity {
     color: var(--main-color);
+    border-style: solid;
+    border-width: 3px 0 0 0;
+    border-color: var(--main-color);
 }
 
 
@@ -467,6 +474,10 @@ text-align: left;
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    #hebergment:checked + .header-switch-hebergment,
+    #activity:checked + .header-switch-activity {
+        border-width: 0 0 3px 0;
+    }
     .hide-text {
         display: none;
     }
@@ -598,7 +609,7 @@ text-align: left;
         height: 34px;
     }
 
-    .header-switch div {
+    .header-switch label {
         width: 50%;
         padding-bottom: 15px;
     }
