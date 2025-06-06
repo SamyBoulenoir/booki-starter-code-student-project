@@ -36,6 +36,11 @@ a {
     font-size: 20px;
 }
 
+.logo-btn-search {
+    font-size: 20px;
+    color: black;
+}
+
 .text-activity-card {
 font-family: 'Raleway';
 font-size: 16px;
@@ -360,6 +365,7 @@ text-align: left;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 15px
 }
 
 .activity-card {
