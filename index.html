@@ -19,21 +19,17 @@
         <header >
             <div class="header-wrap">
                 <img src="./images/logo/Booki.png" alt="Logo Booki" class="logo"/>
-                <div class="header-switch">
-                    <input type="radio" name="switch" id="hebergment" checked>
-                    <label for="hebergment" class="header-switch-hebergment">Hébergements</label>
-
-                    <input type="radio" name="switch" id="activity">
-                    <label for="activity" class="header-switch-activity">Activités</label>
-                </div>
+                <nav class="header-switch">
+                    <a href="#hebergement-anchor" class="nav-link">Hébergements</a>
+                    <a href="#activity-anchor" class="nav-link">Activités</a>
+                </nav>
             </div>
         </header>
         <main>
                 <div>
-                    <h2 class="text-in-center">Trouvez votre hebergement pour des vacances de rêve</h2>
+                    <h1 class="text-in-center">Trouvez votre hebergement pour des vacances de rêve</h1>
                     <p class="text-sizing">En plein centre-ville ou en pleine nature</p>
                 </div>
-                <div>
                     <div class="research-wrap">
                         <div class="research-vector-wrap">
                             <i class="fa-solid fa-location-dot logo-btn-search"></i>
@@ -44,7 +40,6 @@
                             </form>
                         </div>
                         <div id="search-btn">
-                            <img src="./images/search-icon.png" alt="" />
                             <div class="hide-text">Rechercher</div>
                         </div>
                     </div>
@@ -76,8 +71,7 @@
                     <img src="./images/Icon.png" alt="logo bouton" class="info-about-places-logo"/>
                     <span>Plus de 500 logements sont disponibles dans cette ville</span>
                 </div>
-            </div>
-            <div class="hebergements-and-populaires">
+            <div id="hebergement-anchor" class="hebergements-and-populaires">
                 <section class="hebergements">
                     <h2>Hébergement à marseille</h2>
                     <div class="hebergements-cards">
@@ -246,24 +240,34 @@
                     </div>
                 </section>
             </div>
-            <div class="activity-wrapper">
+            <div id="activity-anchor" class="activity-wrapper">
                 <h2 class="marseille-h2">Activités à Marseille</h2>
                 <div class="activity-card-wrapper">
                     <div class="activity-card">
                         <img src="./images/activites/reno-laithienne.jpg" alt="activity card image"/>
-                        <div class="text-activity-card">Vieux port</div>
+                        <div class="text-activity-wrapper">
+                            <p class="text-activity-card">Vieux port</p>
+                        </div>
                     </div>
                     <div class="activity-card">
                         <img src="./images/activites/paul-hermann.jpg" alt="activity card image"/>
-                        <div class="text-activity-card">Fort de Pomègues</div>
+                        <div class="text-activity-wrapper">
+                            <p class="text-activity-card">Fort de Pomègues</p>
+                        </div>
                     </div>
                     <div class="activity-card">
                         <img src="./images/activites/kilyan-sockalingum.jpg" alt="activity card image"/>
-                        <div class="text-activity-card">Parc national des Calanques</div>
+                        <div class="text-activity-wrapper">
+                            <p class="text-activity-card">Parc national des Calanques</p>
+                        </div>
                     </div>
                     <div class="activity-card">
                         <img src="./images/activites/florian-wehde.jpg" alt="activity card image"/>
-                        <div class="text-activity-card">Notre-Dame-de-la-Garde</div>
+                        <div class="text-activity-wrapper">
+                            <p class="text-activity-card">
+                                Notre-Dame-de-la-Garde
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

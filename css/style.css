@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -47,12 +51,12 @@ p, span, div {
 }
 
 .text-activity-card {
-font-family: 'Raleway';
-font-size: 16px;
-font-weight: 700;
-line-height: 18.78px;
-text-align: left;
-
+    font-family: 'Raleway';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18.78px;
+    text-align: left;
+    padding-left: 19px;
 }
 
 .section-title {
@@ -96,6 +100,14 @@ text-align: left;
     line-height: 21.13px;
     text-align: center;
 
+}
+
+.text-in-center {
+    padding-top: 15px;
+}
+
+.text-sizing {
+    padding-top: 15px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -232,30 +244,20 @@ text-align: left;
     margin-top: 3px;
 }
 
-.header-switch input[type="radio"] {
-    display: none;
+.nav-link {
+  display: flex;
+  align-items: flex-end;
+  height: 34px;
+  color: #000;
+  border: none;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.header-switch label {
-    display: flex;
-    align-items: flex-end;
-    height: 34px;
-    color: #000;
-    border: none;
-    transition: color 0.3s ease, border-color 0.3s ease;
-    cursor: pointer;
-}
-
-.header-switch label:hover {
-    color: var(--main-color);
-}
-
-#hebergment:checked + .header-switch-hebergment,
-#activity:checked + .header-switch-activity {
-    color: var(--main-color);
-    border-style: solid;
-    border-width: 3px 0 0 0;
-    border-color: var(--main-color);
+.nav-link:hover {
+  color: var(--main-color);
+  border-top: 3px solid var(--main-color);
 }
 
 
@@ -362,30 +364,33 @@ text-align: left;
 
 /****** activity ***********/
 .activity-wrapper {
-    width: 94%;
+    width: 100%;
     margin-top: 50px;
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 .activity-card-wrapper {
     margin-top: 30px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 15px
+}
+
+.text-activity-wrapper {
+    width: 100%;
 }
 
 .activity-card {
     display: flex;
     flex-direction: column;
     height: 439px;
-    width: 297.5px;
+    width: 22%;
     box-shadow: 0px 3px 15px 0px #0000001A;
     border-radius: 20px;
 }
 
 .activity-card img {
+    object-fit: cover;
     width: 100%;
     height: 380px;
     border-radius: 20px 20px 0px 0px;
@@ -395,7 +400,6 @@ text-align: left;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-left: 19px;
     width: 100%;
     height: 59px;
     gap: 10px;
@@ -461,24 +465,17 @@ text-align: left;
 
     .activity-card {
         height: 270px;
-        width: 193.5px;
+        width: 22%;
     }
 
     .activity-card img {
         height: 200px;
     }
 
-    .activity-card div {
-        width: 174.5px;
-    }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    #hebergment:checked + .header-switch-hebergment,
-    #activity:checked + .header-switch-activity {
-        border-width: 0 0 3px 0;
-    }
     .hide-text {
         display: none;
     }
@@ -537,7 +534,7 @@ text-align: left;
     }
 
     .hebergements-cards .card {
-        width: 335px;
+        width: 100%;
     }
 
     .populaires {
@@ -553,7 +550,7 @@ text-align: left;
     }
 
     .populaires-cards .card {
-        width: 335px;
+        width: 100%;
         height: 136px;
     }
 
@@ -570,16 +567,12 @@ text-align: left;
 
     .activity-card {
         height: 200px;
-        width: 315px;
+        width: 90%;
         margin-bottom: 10px;
     }
 
     .activity-card img {
         height: 141px;
-    }
-
-    .activity-card div {
-        width: 296px;
     }
 
     .footer-wrapper {
@@ -604,7 +597,7 @@ text-align: left;
 
     .header-switch {
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-end;
         width: 100vw;
         height: 34px;
@@ -637,11 +630,11 @@ text-align: left;
         padding-bottom: 20px;
     }
     .text-in-center {
-        margin-left: 5px;
+        margin-left: 15px;
         padding-top: 15px;
     }
     .text-sizing {
-        margin-left: 5px;
+        margin-left: 15px;
     }
     .header-wrap {
         margin-bottom: 20px;
@@ -649,4 +642,17 @@ text-align: left;
     .marseille-h2 {
         margin-left: 10px;
     }
+
+.nav-link {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.nav-link:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    border-top: none;
+    text-align: center;
+}
 }
