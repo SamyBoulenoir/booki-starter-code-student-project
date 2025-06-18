@@ -89,6 +89,7 @@ p, span, div {
 
 .filter-text {
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .hide-text {
@@ -104,6 +105,7 @@ p, span, div {
 
 .text-in-center {
     padding-top: 15px;
+    font-size: 22px;
 }
 
 .text-sizing {
@@ -267,6 +269,10 @@ p, span, div {
 }
 
 /****** search ***********/
+.search-form-wrapper {
+    width: 30%;
+}
+
 .research-wrap {
     display: flex;
     flex-direction: row;
@@ -294,6 +300,7 @@ p, span, div {
     font-weight: 700;
     line-height: 21.13px;
     padding-left: 20px;
+    width: 100%;
 }
 
 #search::placeholder {
@@ -479,6 +486,11 @@ p, span, div {
     .hide-text {
         display: none;
     }
+
+    .search-form-wrapper {
+    width: 100%;
+    }
+
     #search-btn {
         display: flex;
         justify-content: flex-start;
