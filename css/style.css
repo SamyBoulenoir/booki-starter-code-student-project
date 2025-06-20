@@ -79,6 +79,13 @@ p, span, div {
     font-size: 16px;
 }
 
+.card section {
+    padding: 0px !important;
+    width: 100%;
+    display: flex;
+    background-color: white !important;
+}
+
 .euro {
     font-weight: 700;
 }
@@ -371,7 +378,6 @@ p, span, div {
 
 /****** activity ***********/
 .activity-wrapper {
-    width: 100%;
     margin-top: 50px;
     padding-left: 30px;
 }
@@ -478,6 +484,10 @@ p, span, div {
     .activity-card img {
         height: 200px;
     }
+    
+    .filter-btn-wrapper {
+        width: 100%;
+    }
 
 }
 
@@ -486,6 +496,7 @@ p, span, div {
     .hide-text {
         display: none;
     }
+
 
     .search-form-wrapper {
     width: 100%;
@@ -567,7 +578,6 @@ p, span, div {
     }
 
     .activity-wrapper {
-        width: 100%;
         padding-left: 0;
     }
 
@@ -638,12 +648,11 @@ p, span, div {
         justify-content: center;
     }
     .logo {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding: 30px;
     }
     .text-in-center {
         margin-left: 15px;
-        padding-top: 15px;
+        padding-top: 30px;
     }
     .text-sizing {
         margin-left: 15px;
@@ -659,6 +668,7 @@ p, span, div {
     display: flex;
     justify-content: center;
     width: 50%;
+    padding-bottom: 15px;
 }
 
 .nav-link:hover {
